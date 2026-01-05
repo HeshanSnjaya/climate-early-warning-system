@@ -1,0 +1,6 @@
+{
+  "thresholds": {
+    "Flood": 0.6,
+    "Drought": 0.6
+  }
+}

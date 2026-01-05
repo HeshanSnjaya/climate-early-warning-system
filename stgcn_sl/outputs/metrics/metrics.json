@@ -1,0 +1,11 @@
+{
+  "P": 30,
+  "H": 7,
+  "test_MAE": 0.8763207197189331,
+  "test_RMSE": 1.0980192514131977,
+  "N_stations": 429,
+  "T_total": 732,
+  "V_file": "V_precip_log1p.csv",
+  "W_file": "W_knn10.csv",
+  "transform": "log1p(precipitation_sum)"
+}

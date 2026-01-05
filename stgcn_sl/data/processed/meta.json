@@ -1,0 +1,14 @@
+{
+  "csv_path": "D:\\Heshan\\Developments\\test\\Research\\stgcn_sl\\data\\raw\\Sri_Lanka_Climate_Data.csv",
+  "N_stations": 429,
+  "T_days": 732,
+  "date_min": "2022-11-11",
+  "date_max": "2024-11-11",
+  "V_file": "V_precip_log1p.csv",
+  "W_file": "W_knn10.csv",
+  "stations_file": "stations.csv",
+  "knn_k": 10,
+  "sigma_km": 136.28028869628906,
+  "transform": "log1p(precipitation_sum)",
+  "note": "V rows are dates; columns are station_idx (0..N-1)."
+}

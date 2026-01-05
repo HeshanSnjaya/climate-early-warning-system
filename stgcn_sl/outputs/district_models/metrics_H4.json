@@ -1,0 +1,9 @@
+{
+  "H": 4,
+  "macro_f1": 0.9935866602533269,
+  "classes": [
+    "Drought",
+    "Flood",
+    "Normal"
+  ]
+}
