@@ -1,0 +1,738 @@
+ yield from _iterencode(o, _current_indent_level)
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pydeck\bindings\json_tools.py", line 74, in default_serialize
+    attrs = vars(o)
+TypeError: vars() argument must have __dict__ attribute
+  Stopping...
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> streamlit run dashboard/app.py
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.8.100:8501
+
+2026-01-04 20:29:30.555 Uncaught app execution
+Traceback (most recent call last):
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling    
+    result = func()
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 671, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "D:\Heshan\Developments\test\Research\stgcn_sl\dashboard\app.py", line 125, in <module>
+    st.pydeck_chart(deck, width="stretch")
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\streamlit\runtime\metrics_util.py", line 531, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\streamlit\elements\deck_gl_json_chart.py", line 513, in pydeck_chart
+    spec = json.dumps(EMPTY_MAP) if pydeck_obj is None else pydeck_obj.to_json()
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pydeck\bindings\json_tools.py", line 101, in to_json
+    return serialize(self)
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pydeck\bindings\json_tools.py", line 86, in serialize
+    return json.dumps(serializable, sort_keys=True, default=default_serialize, indent=2)
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 439, in _iterencode
+    yield from _iterencode(o, _current_indent_level)
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 439, in _iterencode
+    yield from _iterencode(o, _current_indent_level)
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pydeck\bindings\json_tools.py", line 74, in default_serialize
+    attrs = vars(o)
+TypeError: vars() argument must have __dict__ attribute
+  Stopping...
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> pip show streamlit
+Name: streamlit
+Version: 1.52.2
+Summary: A faster way to build and share data apps
+Home-page: https://streamlit.io
+Author: Snowflake Inc
+Author-email: hello@streamlit.io
+License: Apache License 2.0
+Location: d:\heshan\developments\test\research\venv\lib\site-packages
+Requires: tornado, numpy, blinker, toml, tenacity, gitpython, click, pydeck, pandas, requests, pyarrow, pillow, typing-extensions, watchdog, cachetools, protobuf, altair, packaging
+Required-by:
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> pip show pydeck
+Name: pydeck
+Version: 0.9.1
+Summary: Widget for deck.gl maps
+Home-page: https://github.com/visgl/deck.gl/tree/master/bindings/pydeck
+Author: Andrew Duberstein
+Author-email: ajduberstein@gmail.com
+License: Apache License 2.0
+Location: d:\heshan\developments\test\research\venv\lib\site-packages
+Requires: numpy, jinja2
+Required-by: streamlit
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python --version
+Python 3.10.0
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> streamlit run dashboard/app.py
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.8.100:8501
+
+
+ *  History restored 
+
+PS D:\Heshan\Developments\test\Research> .\venv\Scripts\Activate.ps1
+(venv) PS D:\Heshan\Developments\test\Research> pip install torch numpy pandas scikit-learn shap streamlit
+Requirement already satisfied: torch in d:\heshan\developments\test\research\venv\lib\site-packages (2.9.1)
+Requirement already satisfied: numpy in d:\heshan\developments\test\research\venv\lib\site-packages (2.2.6)
+Requirement already satisfied: pandas in d:\heshan\developments\test\research\venv\lib\site-packages (2.3.3)
+Requirement already satisfied: scikit-learn in d:\heshan\developments\test\research\venv\lib\site-packages (1.7.2)
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='pypi.org', port=443): Read timed out. (read timeout=15)")': /simple/shap/
+WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001D9C479F910>: Failed to establish a new connection: [WinError 10065] A socket operation was attempted to an unreachable host')': /simple/shap/
+WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001D9C479FA30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/shap/
+WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001D9C479EB60>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/shap/
+WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000001D9C479E890>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/shap/
+ERROR: Could not find a version that satisfies the requirement shap (from versions: none)
+ERROR: No matching distribution found for shap
+WARNING: You are using pip version 21.2.3; however, version 25.3 is available.
+You should consider upgrading via the 'D:\Heshan\Developments\test\Research\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+(venv) PS D:\Heshan\Developments\test\Research> 
+(venv) PS D:\Heshan\Developments\test\Research> pip install torch numpy pandas scikit-learn shap streamlit
+Requirement already satisfied: torch in d:\heshan\developments\test\research\venv\lib\site-packages (2.9.1)
+Requirement already satisfied: numpy in d:\heshan\developments\test\research\venv\lib\site-packages (2.2.6)
+Requirement already satisfied: pandas in d:\heshan\developments\test\research\venv\lib\site-packages (2.3.3)
+Requirement already satisfied: scikit-learn in d:\heshan\developments\test\research\venv\lib\site-packages (1.7.2)
+Collecting shap
+  Using cached shap-0.49.1-cp310-cp310-win_amd64.whl (547 kB)
+Requirement already satisfied: streamlit in d:\heshan\developments\test\research\venv\lib\site-packages (1.52.2)
+Requirement already satisfied: fsspec>=0.8.5 in d:\heshan\developments\test\research\venv\lib\site-packages (from torch) (2025.12.0)
+Requirement already satisfied: networkx>=2.5.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from torch) (3.4.2)
+Requirement already satisfied: sympy>=1.13.3 in d:\heshan\developments\test\research\venv\lib\site-packages (from torch) (1.14.0)
+Requirement already satisfied: jinja2 in d:\heshan\developments\test\research\venv\lib\site-packages (from torch) (3.1.6)
+Requirement already satisfied: typing-extensions>=4.10.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from torch) (4.15.0)
+Requirement already satisfied: filelock in d:\heshan\developments\test\research\venv\lib\site-packages (from torch) (3.20.2)
+Requirement already satisfied: pytz>=2020.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in d:\heshan\developments\test\research\venv\lib\site-packages (from pandas) (2025.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in d:\heshan\developments\test\research\venv\lib\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: joblib>=1.2.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from scikit-learn) (1.5.3)
+Requirement already satisfied: scipy>=1.8.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from scikit-learn) (1.15.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: packaging>20.9 in d:\heshan\developments\test\research\venv\lib\site-packages (from shap) (25.0)
+Collecting tqdm>=4.27.0
+  Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Collecting numba>=0.54
+  Using cached numba-0.63.1-cp310-cp310-win_amd64.whl (2.7 MB)
+Collecting cloudpickle
+  Using cached cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Collecting slicer==0.0.8
+  Using cached slicer-0.0.8-py3-none-any.whl (15 kB)
+Requirement already satisfied: gitpython!=3.1.19,<4,>=3.0.7 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (3.1.46)
+Requirement already satisfied: altair!=5.4.0,!=5.4.1,<7,>=4.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (6.0.0)
+Requirement already satisfied: watchdog<7,>=2.1.5 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (6.0.0)
+Requirement already satisfied: toml<2,>=0.10.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (0.10.2)
+Requirement already satisfied: blinker<2,>=1.5.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (1.9.0)
+Requirement already satisfied: cachetools<7,>=4.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (6.2.4)
+Requirement already satisfied: pydeck<1,>=0.8.0b4 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (0.9.1)
+Requirement already satisfied: protobuf<7,>=3.20 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (6.33.2)
+Requirement already satisfied: pyarrow>=7.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (22.0.0)
+Requirement already satisfied: tenacity<10,>=8.1.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (9.1.2)
+Requirement already satisfied: tornado!=6.5.0,<7,>=6.0.3 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (6.5.4)
+Requirement already satisfied: pillow<13,>=7.1.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (12.1.0)
+Requirement already satisfied: requests<3,>=2.27 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (2.32.5)
+Requirement already satisfied: click<9,>=7.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (8.3.1)
+Requirement already satisfied: narwhals>=1.27.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (2.14.0)
+Requirement already satisfied: jsonschema>=3.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (4.25.1)
+Requirement already satisfied: colorama in d:\heshan\developments\test\research\venv\lib\site-packages (from click<9,>=7.0->streamlit) (0.4.6)
+Requirement already satisfied: gitdb<5,>=4.0.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from gitpython!=3.1.19,<4,>=3.0.7->streamlit) (4.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit) (5.0.2)
+Requirement already satisfied: referencing>=0.28.4 in d:\heshan\developments\test\research\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (0.37.0)
+Requirement already satisfied: rpds-py>=0.7.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (0.30.0)
+Requirement already satisfied: attrs>=22.2.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in d:\heshan\developments\test\research\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (2025.9.1)
+Collecting llvmlite<0.47,>=0.46.0dev0
+  Using cached llvmlite-0.46.0-cp310-cp310-win_amd64.whl (38.1 MB)
+Requirement already satisfied: MarkupSafe>=2.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from jinja2->torch) (3.0.3)
+Requirement already satisfied: six>=1.5 in d:\heshan\developments\test\research\venv\lib\site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in d:\heshan\developments\test\research\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (3.4.4)
+Requirement already satisfied: certifi>=2017.4.17 in d:\heshan\developments\test\research\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (2026.1.4) 
+Requirement already satisfied: urllib3<3,>=1.21.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (2.6.2)    
+Requirement already satisfied: idna<4,>=2.5 in d:\heshan\developments\test\research\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (3.11)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Installing collected packages: llvmlite, tqdm, slicer, numba, cloudpickle, shap
+Successfully installed cloudpickle-3.1.2 llvmlite-0.46.0 numba-0.63.1 shap-0.49.1 slicer-0.0.8 tqdm-4.67.1
+WARNING: You are using pip version 21.2.3; however, version 25.3 is available.
+You should consider upgrading via the 'D:\Heshan\Developments\test\Research\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+(venv) PS D:\Heshan\Developments\test\Research> cd D:\Heshan\Developments\test\Research\stgcn_sl        
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\04_batch_train_horizons.py
+Running: python D:\Heshan\Developments\test\Research\stgcn_sl\scripts\02_train_stgcn_regression.py --P 30 --H 1 --epochs 30 --batch 16 --lr 0.001
+Traceback (most recent call last):
+  File "D:\Heshan\Developments\test\Research\stgcn_sl\scripts\02_train_stgcn_regression.py", line 7, in <module>
+    from sklearn.metrics import mean_absolute_error, mean_squared_error
+ModuleNotFoundError: No module named 'sklearn'
+Traceback (most recent call last):
+  File "D:\Heshan\Developments\test\Research\stgcn_sl\scripts\04_batch_train_horizons.py", line 22, in <module>
+    subprocess.run(cmd, check=True)
+  File "C:\Users\adeuser746\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 524, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'D:\\Heshan\\Developments\\test\\Research\\stgcn_sl\\scripts\\02_train_stgcn_regression.py', '--P', '30', '--H', '1', '--epochs', '30', '--batch', '16', '--lr', '0.001']' returned non-zero exit status 1.
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python -m pip install -U scikit-learn
+Requirement already satisfied: scikit-learn in d:\heshan\developments\test\research\venv\lib\site-packages (1.7.2)
+Requirement already satisfied: joblib>=1.2.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from scikit-learn) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: scipy>=1.8.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from scikit-learn) (1.15.3)
+Requirement already satisfied: numpy>=1.22.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from scikit-learn) (2.2.6)
+WARNING: You are using pip version 21.2.3; however, version 25.3 is available.
+You should consider upgrading via the 'D:\Heshan\Developments\test\Research\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python -c "import sklearn; print(sklearn.__version__)"
+1.7.2
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\04_batch_train_horizons.py
+Running: D:\Heshan\Developments\test\Research\venv\Scripts\python.exe D:\Heshan\Developments\test\Research\stgcn_sl\scripts\02_train_stgcn_regression.py --P 30 --H 1 --epochs 30 --batch 16 --lr 0.001
+Epoch 01 | train_L1=1.1832 | val_MAE=1.0796 | val_RMSE=1.4689
+Epoch 02 | train_L1=0.9279 | val_MAE=0.7514 | val_RMSE=0.9416
+Epoch 03 | train_L1=0.7890 | val_MAE=0.6911 | val_RMSE=0.8628
+Epoch 04 | train_L1=0.7529 | val_MAE=0.6702 | val_RMSE=0.8603
+Epoch 05 | train_L1=0.7529 | val_MAE=0.6956 | val_RMSE=0.9088
+Epoch 06 | train_L1=0.7492 | val_MAE=0.6859 | val_RMSE=0.8916
+Epoch 07 | train_L1=0.7483 | val_MAE=0.6752 | val_RMSE=0.8770
+Epoch 08 | train_L1=0.7388 | val_MAE=0.6705 | val_RMSE=0.8659
+Epoch 09 | train_L1=0.7385 | val_MAE=0.6945 | val_RMSE=0.9097
+Epoch 10 | train_L1=0.7398 | val_MAE=0.6842 | val_RMSE=0.8936
+Epoch 11 | train_L1=0.7427 | val_MAE=0.6725 | val_RMSE=0.8735
+Epoch 12 | train_L1=0.7365 | val_MAE=0.6747 | val_RMSE=0.8751
+Epoch 13 | train_L1=0.7412 | val_MAE=0.6993 | val_RMSE=0.9180
+Epoch 14 | train_L1=0.7404 | val_MAE=0.6917 | val_RMSE=0.9018
+Epoch 15 | train_L1=0.7416 | val_MAE=0.6766 | val_RMSE=0.8778
+Epoch 16 | train_L1=0.7423 | val_MAE=0.6764 | val_RMSE=0.8763
+Epoch 17 | train_L1=0.7395 | val_MAE=0.6731 | val_RMSE=0.8708
+Epoch 18 | train_L1=0.7365 | val_MAE=0.6777 | val_RMSE=0.8790
+Epoch 19 | train_L1=0.7401 | val_MAE=0.6740 | val_RMSE=0.8740
+Epoch 20 | train_L1=0.7347 | val_MAE=0.6791 | val_RMSE=0.8857
+Epoch 21 | train_L1=0.7411 | val_MAE=0.6742 | val_RMSE=0.8693
+Epoch 22 | train_L1=0.7361 | val_MAE=0.6800 | val_RMSE=0.8863
+Epoch 23 | train_L1=0.7337 | val_MAE=0.6740 | val_RMSE=0.8709
+Epoch 24 | train_L1=0.7359 | val_MAE=0.6853 | val_RMSE=0.8948
+Epoch 25 | train_L1=0.7354 | val_MAE=0.6748 | val_RMSE=0.8746
+Epoch 26 | train_L1=0.7368 | val_MAE=0.6734 | val_RMSE=0.8702
+Epoch 27 | train_L1=0.7320 | val_MAE=0.6733 | val_RMSE=0.8748
+Epoch 28 | train_L1=0.7388 | val_MAE=0.6742 | val_RMSE=0.8702
+Epoch 29 | train_L1=0.7391 | val_MAE=0.6731 | val_RMSE=0.8720
+Epoch 30 | train_L1=0.7309 | val_MAE=0.6879 | val_RMSE=0.8987
+Test metrics: {'P': 30, 'H': 1, 'test_MAE': 0.7982524037361145, 'test_RMSE': 1.0175077154068541, 'N_stations': 429, 'T_total': 732, 'V_file': 'V_precip_log1p.csv', 'W_file': 'W_knn10.csv', 'transform': 'log1p(precipitation_sum)'}
+Saved predictions: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H1.csv
+Running: D:\Heshan\Developments\test\Research\venv\Scripts\python.exe D:\Heshan\Developments\test\Research\stgcn_sl\scripts\02_train_stgcn_regression.py --P 30 --H 2 --epochs 30 --batch 16 --lr 0.001
+Epoch 01 | train_L1=1.1798 | val_MAE=1.0923 | val_RMSE=1.4854
+Epoch 02 | train_L1=0.9480 | val_MAE=0.7624 | val_RMSE=0.9365
+Epoch 03 | train_L1=0.8214 | val_MAE=0.7635 | val_RMSE=0.9713
+Epoch 04 | train_L1=0.8180 | val_MAE=0.7386 | val_RMSE=0.9344
+Epoch 05 | train_L1=0.7996 | val_MAE=0.7291 | val_RMSE=0.9266
+Epoch 06 | train_L1=0.8007 | val_MAE=0.7304 | val_RMSE=0.9309
+Epoch 07 | train_L1=0.7934 | val_MAE=0.7309 | val_RMSE=0.9419
+Epoch 08 | train_L1=0.7936 | val_MAE=0.7328 | val_RMSE=0.9463
+Epoch 09 | train_L1=0.7937 | val_MAE=0.7293 | val_RMSE=0.9388
+Epoch 10 | train_L1=0.7932 | val_MAE=0.7406 | val_RMSE=0.9618
+Epoch 11 | train_L1=0.7935 | val_MAE=0.7424 | val_RMSE=0.9661
+Epoch 12 | train_L1=0.8009 | val_MAE=0.7352 | val_RMSE=0.9502
+Epoch 13 | train_L1=0.7931 | val_MAE=0.7294 | val_RMSE=0.9385
+Epoch 14 | train_L1=0.7930 | val_MAE=0.7298 | val_RMSE=0.9379
+Epoch 15 | train_L1=0.7905 | val_MAE=0.7346 | val_RMSE=0.9409
+Epoch 16 | train_L1=0.7917 | val_MAE=0.7304 | val_RMSE=0.9389
+Epoch 17 | train_L1=0.7920 | val_MAE=0.7294 | val_RMSE=0.9393
+Epoch 18 | train_L1=0.7959 | val_MAE=0.7307 | val_RMSE=0.9350
+Epoch 19 | train_L1=0.7890 | val_MAE=0.7394 | val_RMSE=0.9587
+Epoch 20 | train_L1=0.7916 | val_MAE=0.7306 | val_RMSE=0.9388
+Epoch 21 | train_L1=0.7908 | val_MAE=0.7299 | val_RMSE=0.9389
+Epoch 22 | train_L1=0.7932 | val_MAE=0.7343 | val_RMSE=0.9486
+Epoch 23 | train_L1=0.7912 | val_MAE=0.7356 | val_RMSE=0.9526
+Epoch 24 | train_L1=0.7885 | val_MAE=0.7319 | val_RMSE=0.9380
+Epoch 25 | train_L1=0.7892 | val_MAE=0.7312 | val_RMSE=0.9370
+Epoch 26 | train_L1=0.7944 | val_MAE=0.7489 | val_RMSE=0.9761
+Epoch 27 | train_L1=0.7905 | val_MAE=0.7311 | val_RMSE=0.9392
+Epoch 28 | train_L1=0.7967 | val_MAE=0.7432 | val_RMSE=0.9634
+Epoch 29 | train_L1=0.7895 | val_MAE=0.7351 | val_RMSE=0.9422
+Epoch 30 | train_L1=0.7957 | val_MAE=0.7319 | val_RMSE=0.9418
+Test metrics: {'P': 30, 'H': 2, 'test_MAE': 0.816539466381073, 'test_RMSE': 1.0293884236630726, 'N_stations': 429, 'T_total': 732, 'V_file': 'V_precip_log1p.csv', 'W_file': 'W_knn10.csv', 'transform': 'log1p(precipitation_sum)'}
+Saved predictions: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H2.csv
+Running: D:\Heshan\Developments\test\Research\venv\Scripts\python.exe D:\Heshan\Developments\test\Research\stgcn_sl\scripts\02_train_stgcn_regression.py --P 30 --H 3 --epochs 30 --batch 16 --lr 0.001
+Epoch 01 | train_L1=1.2298 | val_MAE=1.0959 | val_RMSE=1.4903
+Epoch 02 | train_L1=0.9502 | val_MAE=0.7912 | val_RMSE=0.9642
+Epoch 03 | train_L1=0.8365 | val_MAE=0.7843 | val_RMSE=0.9878
+Epoch 04 | train_L1=0.8357 | val_MAE=0.7697 | val_RMSE=0.9633
+Epoch 05 | train_L1=0.8298 | val_MAE=0.7669 | val_RMSE=0.9640
+Epoch 06 | train_L1=0.8128 | val_MAE=0.7682 | val_RMSE=0.9663
+Epoch 07 | train_L1=0.8250 | val_MAE=0.7774 | val_RMSE=0.9777
+Epoch 08 | train_L1=0.8270 | val_MAE=0.7667 | val_RMSE=0.9675
+Epoch 09 | train_L1=0.8218 | val_MAE=0.7683 | val_RMSE=0.9672
+Epoch 10 | train_L1=0.8420 | val_MAE=0.7716 | val_RMSE=0.9835
+Epoch 11 | train_L1=0.8299 | val_MAE=0.7677 | val_RMSE=0.9714
+Epoch 12 | train_L1=0.8245 | val_MAE=0.7710 | val_RMSE=0.9819
+Epoch 13 | train_L1=0.8255 | val_MAE=0.7681 | val_RMSE=0.9684
+Epoch 14 | train_L1=0.8266 | val_MAE=0.7694 | val_RMSE=0.9706
+Epoch 15 | train_L1=0.8202 | val_MAE=0.7677 | val_RMSE=0.9735
+Epoch 16 | train_L1=0.8332 | val_MAE=0.7688 | val_RMSE=0.9748
+Epoch 17 | train_L1=0.8238 | val_MAE=0.7684 | val_RMSE=0.9730
+Epoch 18 | train_L1=0.8193 | val_MAE=0.7696 | val_RMSE=0.9792
+Epoch 19 | train_L1=0.8247 | val_MAE=0.7693 | val_RMSE=0.9698
+Epoch 20 | train_L1=0.8219 | val_MAE=0.7710 | val_RMSE=0.9799
+Epoch 21 | train_L1=0.8251 | val_MAE=0.7704 | val_RMSE=0.9768
+Epoch 22 | train_L1=0.8258 | val_MAE=0.7704 | val_RMSE=0.9696
+Epoch 23 | train_L1=0.8164 | val_MAE=0.7699 | val_RMSE=0.9734
+Epoch 24 | train_L1=0.8197 | val_MAE=0.7726 | val_RMSE=0.9818
+Epoch 25 | train_L1=0.8245 | val_MAE=0.7752 | val_RMSE=0.9911
+Epoch 26 | train_L1=0.8235 | val_MAE=0.7736 | val_RMSE=0.9713
+Epoch 27 | train_L1=0.8237 | val_MAE=0.7715 | val_RMSE=0.9836
+Epoch 28 | train_L1=0.8256 | val_MAE=0.7717 | val_RMSE=0.9728
+Epoch 29 | train_L1=0.8273 | val_MAE=0.7705 | val_RMSE=0.9729
+Epoch 30 | train_L1=0.8226 | val_MAE=0.7712 | val_RMSE=0.9715
+Test metrics: {'P': 30, 'H': 3, 'test_MAE': 0.8368261456489563, 'test_RMSE': 1.0539177240039788, 'N_stations': 429, 'T_total': 732, 'V_file': 'V_precip_log1p.csv', 'W_file': 'W_knn10.csv', 'transform': 'log1p(precipitation_sum)'}
+Saved predictions: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H3.csv
+Running: D:\Heshan\Developments\test\Research\venv\Scripts\python.exe D:\Heshan\Developments\test\Research\stgcn_sl\scripts\02_train_stgcn_regression.py --P 30 --H 4 --epochs 30 --batch 16 --lr 0.001
+Epoch 01 | train_L1=1.2477 | val_MAE=1.0973 | val_RMSE=1.4921
+Epoch 02 | train_L1=0.9205 | val_MAE=0.8248 | val_RMSE=0.9951
+Epoch 03 | train_L1=0.8589 | val_MAE=0.8075 | val_RMSE=1.0054
+Epoch 04 | train_L1=0.8470 | val_MAE=0.8054 | val_RMSE=1.0197
+Epoch 05 | train_L1=0.8453 | val_MAE=0.8097 | val_RMSE=1.0090
+Epoch 06 | train_L1=0.8463 | val_MAE=0.8056 | val_RMSE=1.0221
+Epoch 07 | train_L1=0.8468 | val_MAE=0.8105 | val_RMSE=1.0448
+Epoch 08 | train_L1=0.8525 | val_MAE=0.8059 | val_RMSE=1.0146
+Epoch 09 | train_L1=0.8512 | val_MAE=0.8209 | val_RMSE=1.0713
+Epoch 10 | train_L1=0.8572 | val_MAE=0.8130 | val_RMSE=1.0505
+Epoch 11 | train_L1=0.8606 | val_MAE=0.8066 | val_RMSE=1.0148
+Epoch 12 | train_L1=0.8420 | val_MAE=0.8391 | val_RMSE=1.0293
+Epoch 13 | train_L1=0.8537 | val_MAE=0.8079 | val_RMSE=1.0327
+Epoch 14 | train_L1=0.8509 | val_MAE=0.8070 | val_RMSE=1.0243
+Epoch 15 | train_L1=0.8553 | val_MAE=0.8117 | val_RMSE=1.0436
+Epoch 16 | train_L1=0.8512 | val_MAE=0.8144 | val_RMSE=1.0541
+Epoch 17 | train_L1=0.8571 | val_MAE=0.8071 | val_RMSE=1.0243
+Epoch 18 | train_L1=0.8497 | val_MAE=0.8068 | val_RMSE=1.0224
+Epoch 19 | train_L1=0.8431 | val_MAE=0.8075 | val_RMSE=1.0142
+Epoch 20 | train_L1=0.8406 | val_MAE=0.8099 | val_RMSE=1.0127
+Epoch 21 | train_L1=0.8407 | val_MAE=0.8131 | val_RMSE=1.0100
+Epoch 22 | train_L1=0.8450 | val_MAE=0.8066 | val_RMSE=1.0222
+Epoch 23 | train_L1=0.8421 | val_MAE=0.8132 | val_RMSE=1.0106
+Epoch 24 | train_L1=0.8381 | val_MAE=0.8066 | val_RMSE=1.0206
+Epoch 25 | train_L1=0.8341 | val_MAE=0.8078 | val_RMSE=1.0315
+Epoch 26 | train_L1=0.8391 | val_MAE=0.8178 | val_RMSE=1.0150
+Epoch 27 | train_L1=0.8378 | val_MAE=0.8137 | val_RMSE=1.0136
+Epoch 28 | train_L1=0.8486 | val_MAE=0.8074 | val_RMSE=1.0233
+Epoch 29 | train_L1=0.8455 | val_MAE=0.8073 | val_RMSE=1.0140
+Epoch 30 | train_L1=0.8417 | val_MAE=0.8065 | val_RMSE=1.0232
+Test metrics: {'P': 30, 'H': 4, 'test_MAE': 0.8792966604232788, 'test_RMSE': 1.1106140309630952, 'N_stations': 429, 'T_total': 732, 'V_file': 'V_precip_log1p.csv', 'W_file': 'W_knn10.csv', 'transform': 'log1p(precipitation_sum)'}
+Saved predictions: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H4.csv
+Running: D:\Heshan\Developments\test\Research\venv\Scripts\python.exe D:\Heshan\Developments\test\Research\stgcn_sl\scripts\02_train_stgcn_regression.py --P 30 --H 5 --epochs 30 --batch 16 --lr 0.001
+Epoch 01 | train_L1=1.1297 | val_MAE=1.0317 | val_RMSE=1.4056
+Epoch 02 | train_L1=0.9545 | val_MAE=0.8812 | val_RMSE=1.0318
+Epoch 03 | train_L1=0.8802 | val_MAE=0.8377 | val_RMSE=1.0209
+Epoch 04 | train_L1=0.8692 | val_MAE=0.8285 | val_RMSE=1.0293
+Epoch 05 | train_L1=0.8604 | val_MAE=0.8271 | val_RMSE=1.0375
+Epoch 06 | train_L1=0.8580 | val_MAE=0.8260 | val_RMSE=1.0555
+Epoch 07 | train_L1=0.8772 | val_MAE=0.8282 | val_RMSE=1.0632
+Epoch 08 | train_L1=0.8456 | val_MAE=0.8514 | val_RMSE=1.0475
+Epoch 09 | train_L1=0.8617 | val_MAE=0.8262 | val_RMSE=1.0524
+Epoch 10 | train_L1=0.8584 | val_MAE=0.8338 | val_RMSE=1.0401
+Epoch 11 | train_L1=0.8613 | val_MAE=0.8431 | val_RMSE=1.0434
+Epoch 12 | train_L1=0.8565 | val_MAE=0.8275 | val_RMSE=1.0540
+Epoch 13 | train_L1=0.8592 | val_MAE=0.8361 | val_RMSE=1.0394
+Epoch 14 | train_L1=0.8568 | val_MAE=0.8278 | val_RMSE=1.0499
+Epoch 15 | train_L1=0.8720 | val_MAE=0.8323 | val_RMSE=1.0733
+Epoch 16 | train_L1=0.8520 | val_MAE=0.8622 | val_RMSE=1.0566
+Epoch 17 | train_L1=0.8572 | val_MAE=0.8284 | val_RMSE=1.0521
+Epoch 18 | train_L1=0.8521 | val_MAE=0.8292 | val_RMSE=1.0474
+Epoch 19 | train_L1=0.8518 | val_MAE=0.8471 | val_RMSE=1.0421
+Epoch 20 | train_L1=0.8552 | val_MAE=0.8285 | val_RMSE=1.0571
+Epoch 21 | train_L1=0.8578 | val_MAE=0.8289 | val_RMSE=1.0588
+Epoch 22 | train_L1=0.8541 | val_MAE=0.8293 | val_RMSE=1.0522
+Epoch 23 | train_L1=0.8626 | val_MAE=0.8312 | val_RMSE=1.0444
+Epoch 24 | train_L1=0.8584 | val_MAE=0.8390 | val_RMSE=1.0376
+Epoch 25 | train_L1=0.8631 | val_MAE=0.8351 | val_RMSE=1.0423
+Epoch 26 | train_L1=0.8576 | val_MAE=0.8353 | val_RMSE=1.0450
+Epoch 27 | train_L1=0.8613 | val_MAE=0.8429 | val_RMSE=1.0413
+Epoch 28 | train_L1=0.8518 | val_MAE=0.8314 | val_RMSE=1.0457
+Epoch 29 | train_L1=0.8533 | val_MAE=0.8316 | val_RMSE=1.0434
+Epoch 30 | train_L1=0.8589 | val_MAE=0.8331 | val_RMSE=1.0422
+Test metrics: {'P': 30, 'H': 5, 'test_MAE': 0.8980478644371033, 'test_RMSE': 1.1344834204950611, 'N_stations': 429, 'T_total': 732, 'V_file': 'V_precip_log1p.csv', 'W_file': 'W_knn10.csv', 'transform': 'log1p(precipitation_sum)'}
+Saved predictions: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H5.csv
+Running: D:\Heshan\Developments\test\Research\venv\Scripts\python.exe D:\Heshan\Developments\test\Research\stgcn_sl\scripts\02_train_stgcn_regression.py --P 30 --H 6 --epochs 30 --batch 16 --lr 0.001
+Epoch 01 | train_L1=1.1287 | val_MAE=0.9915 | val_RMSE=1.3468
+Epoch 02 | train_L1=0.9327 | val_MAE=0.8518 | val_RMSE=1.0732
+Epoch 03 | train_L1=0.8826 | val_MAE=0.8424 | val_RMSE=1.0475
+Epoch 04 | train_L1=0.8656 | val_MAE=0.8424 | val_RMSE=1.0421
+Epoch 05 | train_L1=0.8617 | val_MAE=0.8518 | val_RMSE=1.0514
+Epoch 06 | train_L1=0.8617 | val_MAE=0.8380 | val_RMSE=1.0590
+Epoch 07 | train_L1=0.8598 | val_MAE=0.8383 | val_RMSE=1.0689
+Epoch 08 | train_L1=0.8655 | val_MAE=0.8440 | val_RMSE=1.0935
+Epoch 09 | train_L1=0.8686 | val_MAE=0.8487 | val_RMSE=1.0548
+Epoch 10 | train_L1=0.8571 | val_MAE=0.8393 | val_RMSE=1.0715
+Epoch 11 | train_L1=0.8505 | val_MAE=0.8398 | val_RMSE=1.0610
+Epoch 12 | train_L1=0.8600 | val_MAE=0.8436 | val_RMSE=1.0547
+Epoch 13 | train_L1=0.8654 | val_MAE=0.8640 | val_RMSE=1.0642
+Epoch 14 | train_L1=0.8637 | val_MAE=0.8426 | val_RMSE=1.0584
+Epoch 15 | train_L1=0.8564 | val_MAE=0.8510 | val_RMSE=1.0569
+Epoch 16 | train_L1=0.8556 | val_MAE=0.8438 | val_RMSE=1.0568
+Epoch 17 | train_L1=0.8583 | val_MAE=0.8418 | val_RMSE=1.0785
+Epoch 18 | train_L1=0.8561 | val_MAE=0.8419 | val_RMSE=1.0574
+Epoch 19 | train_L1=0.8538 | val_MAE=0.8567 | val_RMSE=1.0624
+Epoch 20 | train_L1=0.8495 | val_MAE=0.8434 | val_RMSE=1.0845
+Epoch 21 | train_L1=0.8649 | val_MAE=0.8508 | val_RMSE=1.0581
+Epoch 22 | train_L1=0.8580 | val_MAE=0.8429 | val_RMSE=1.0562
+Epoch 23 | train_L1=0.8531 | val_MAE=0.8617 | val_RMSE=1.0613
+Epoch 24 | train_L1=0.8631 | val_MAE=0.8465 | val_RMSE=1.0544
+Epoch 25 | train_L1=0.8604 | val_MAE=0.8408 | val_RMSE=1.0634
+Epoch 26 | train_L1=0.8586 | val_MAE=0.8488 | val_RMSE=1.0557
+Epoch 27 | train_L1=0.8564 | val_MAE=0.8422 | val_RMSE=1.0545
+Epoch 28 | train_L1=0.8615 | val_MAE=0.8449 | val_RMSE=1.0626
+Epoch 29 | train_L1=0.8531 | val_MAE=0.8442 | val_RMSE=1.0861
+Epoch 30 | train_L1=0.8605 | val_MAE=0.8496 | val_RMSE=1.0566
+Test metrics: {'P': 30, 'H': 6, 'test_MAE': 0.8764541745185852, 'test_RMSE': 1.1015025453958005, 'N_stations': 429, 'T_total': 732, 'V_file': 'V_precip_log1p.csv', 'W_file': 'W_knn10.csv', 'transform': 'log1p(precipitation_sum)'}
+Saved predictions: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H6.csv
+Running: D:\Heshan\Developments\test\Research\venv\Scripts\python.exe D:\Heshan\Developments\test\Research\stgcn_sl\scripts\02_train_stgcn_regression.py --P 30 --H 7 --epochs 30 --batch 16 --lr 0.001
+Epoch 01 | train_L1=1.2343 | val_MAE=1.1313 | val_RMSE=1.5339
+Epoch 02 | train_L1=1.0048 | val_MAE=0.8684 | val_RMSE=1.0391
+Epoch 03 | train_L1=0.8826 | val_MAE=0.8802 | val_RMSE=1.0541
+Epoch 04 | train_L1=0.8595 | val_MAE=0.8358 | val_RMSE=1.0558
+Epoch 05 | train_L1=0.8603 | val_MAE=0.8373 | val_RMSE=1.0503
+Epoch 06 | train_L1=0.8502 | val_MAE=0.8581 | val_RMSE=1.0610
+Epoch 07 | train_L1=0.8512 | val_MAE=0.8382 | val_RMSE=1.0586
+Epoch 08 | train_L1=0.8489 | val_MAE=0.8372 | val_RMSE=1.0628
+Epoch 09 | train_L1=0.8467 | val_MAE=0.8416 | val_RMSE=1.0581
+Epoch 10 | train_L1=0.8529 | val_MAE=0.8378 | val_RMSE=1.0650
+Epoch 11 | train_L1=0.8551 | val_MAE=0.8385 | val_RMSE=1.0781
+Epoch 12 | train_L1=0.8540 | val_MAE=0.8382 | val_RMSE=1.0614
+Epoch 13 | train_L1=0.8562 | val_MAE=0.8410 | val_RMSE=1.0606
+Epoch 14 | train_L1=0.8496 | val_MAE=0.8439 | val_RMSE=1.0614
+Epoch 15 | train_L1=0.8513 | val_MAE=0.8400 | val_RMSE=1.0839
+Epoch 16 | train_L1=0.8585 | val_MAE=0.8430 | val_RMSE=1.0591
+Epoch 17 | train_L1=0.8435 | val_MAE=0.8424 | val_RMSE=1.0922
+Epoch 18 | train_L1=0.8525 | val_MAE=0.8378 | val_RMSE=1.0670
+Epoch 19 | train_L1=0.8477 | val_MAE=0.8401 | val_RMSE=1.0582
+Epoch 20 | train_L1=0.8473 | val_MAE=0.8628 | val_RMSE=1.0691
+Epoch 21 | train_L1=0.8555 | val_MAE=0.8465 | val_RMSE=1.0616
+Epoch 22 | train_L1=0.8569 | val_MAE=0.8445 | val_RMSE=1.0592
+Epoch 23 | train_L1=0.8489 | val_MAE=0.8428 | val_RMSE=1.0580
+Epoch 24 | train_L1=0.8479 | val_MAE=0.8412 | val_RMSE=1.0611
+Epoch 25 | train_L1=0.8504 | val_MAE=0.8395 | val_RMSE=1.0571
+Epoch 26 | train_L1=0.8409 | val_MAE=0.8423 | val_RMSE=1.0589
+Epoch 27 | train_L1=0.8457 | val_MAE=0.8404 | val_RMSE=1.0616
+Epoch 28 | train_L1=0.8454 | val_MAE=0.8397 | val_RMSE=1.0588
+Epoch 29 | train_L1=0.8484 | val_MAE=0.8429 | val_RMSE=1.0585
+Epoch 30 | train_L1=0.8529 | val_MAE=0.8409 | val_RMSE=1.0624
+Test metrics: {'P': 30, 'H': 7, 'test_MAE': 0.8763207197189331, 'test_RMSE': 1.0980192514131977, 'N_stations': 429, 'T_total': 732, 'V_file': 'V_precip_log1p.csv', 'W_file': 'W_knn10.csv', 'transform': 'log1p(precipitation_sum)'}
+Saved predictions: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H7.csv
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python -m pip install geopandas shapely pyproj fiona
+Collecting geopandas
+  Downloading geopandas-1.1.2-py3-none-any.whl (341 kB)
+     |████████████████████████████████| 341 kB 819 kB/s
+Collecting shapely
+  Downloading shapely-2.1.2-cp310-cp310-win_amd64.whl (1.7 MB)
+     |████████████████████████████████| 1.7 MB 3.3 MB/s
+Collecting pyproj
+  Downloading pyproj-3.7.1-cp310-cp310-win_amd64.whl (6.3 MB)
+     |████████████████████████████████| 6.3 MB 2.2 MB/s
+Collecting fiona
+  Downloading fiona-1.10.1-cp310-cp310-win_amd64.whl (24.5 MB)
+     |████████████████████████████████| 24.5 MB 6.8 MB/s
+Requirement already satisfied: numpy>=1.24 in d:\heshan\developments\test\research\venv\lib\site-packages (from geopandas) (2.2.6)
+Requirement already satisfied: packaging in d:\heshan\developments\test\research\venv\lib\site-packages (from geopandas) (25.0)
+Collecting pyogrio>=0.7.2
+  Downloading pyogrio-0.12.1-cp310-cp310-win_amd64.whl (22.9 MB)
+     |████████████████████████████████| 22.9 MB 3.2 MB/s
+Requirement already satisfied: pandas>=2.0.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from geopandas) (2.3.3)
+Requirement already satisfied: certifi in d:\heshan\developments\test\research\venv\lib\site-packages (from pyproj) (2026.1.4)
+Requirement already satisfied: attrs>=19.2.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from fiona) (25.4.0)
+Collecting cligj>=0.5
+  Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+Collecting click-plugins>=1.0
+  Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: click~=8.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from fiona) (8.3.1)
+Requirement already satisfied: colorama in d:\heshan\developments\test\research\venv\lib\site-packages (from click~=8.0->fiona) (0.4.6)
+Requirement already satisfied: tzdata>=2022.7 in d:\heshan\developments\test\research\venv\lib\site-packages (from pandas>=2.0.0->geopandas) (2025.3)
+Requirement already satisfied: pytz>=2020.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from pandas>=2.0.0->geopandas) (2025.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in d:\heshan\developments\test\research\venv\lib\site-packages (from pandas>=2.0.0->geopandas) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in d:\heshan\developments\test\research\venv\lib\site-packages (from python-dateutil>=2.8.2->pandas>=2.0.0->geopandas) (1.17.0)
+Installing collected packages: shapely, pyproj, pyogrio, cligj, click-plugins, geopandas, fiona
+Successfully installed click-plugins-1.1.1.2 cligj-0.7.2 fiona-1.10.1 geopandas-1.1.2 pyogrio-0.12.1 pyproj-3.7.1 shapely-2.1.2
+WARNING: You are using pip version 21.2.3; however, version 25.3 is available.
+You should consider upgrading via the 'D:\Heshan\Developments\test\Research\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\12a_inspect_district_geojson.py
+CRS: EPSG:4326
+Columns: ['source', 'id', 'name', 'geometry']
+Head:
+                   source    id           name                                           geometry
+0  https://simplemaps.com  LK53  Trikuṇāmalaya  POLYGON ((80.92292 8.98892, 80.92319 8.97321, ...
+1  https://simplemaps.com  LK45        Mulativ  POLYGON ((80.92292 8.98892, 80.92284 8.98888, ...
+2  https://simplemaps.com  LK41       Yāpanaya  MULTIPOLYGON (((80.62598 9.45475, 80.62591 9.4...
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\05_prepare_dashboard_files_allH.py
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\neighbors_knn10.csv
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H1_mm.csv
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H2_mm.csv
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H3_mm.csv
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H4_mm.csv
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H5_mm.csv
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H6_mm.csv
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\predictions\predictions_P30_H7_mm.csv
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\12b_station_to_district.py
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\data\processed\station_to_district.csv
+Stations: 429 Missing matches: 3
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\12c_fix_unmatched_stations.py
+Traceback (most recent call last):
+  File "D:\Heshan\Developments\test\Research\stgcn_sl\scripts\12c_fix_unmatched_stations.py", line 31, in <module>
+    j2 = gpd.sjoin(missing.drop(columns=[DISTRICT_FIELD], errors="ignore"),
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\geopandas\tools\sjoin.py", line 119, in sjoin
+    joined, _ = _frame_join(
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\geopandas\tools\sjoin.py", line 461, in _frame_join
+    right_df, right_column_names = _reset_index_with_suffix(right_df, rsuffix, left_df)
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\geopandas\tools\sjoin.py", line 280, in _reset_index_with_suffix
+    raise ValueError(
+ValueError: 'index_right' cannot be a column name in the frames being joined
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\12c_fix_unmatched_stations.py
+Traceback (most recent call last):
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Heshan\Developments\test\Research\stgcn_sl\scripts\12c_fix_unmatched_stations.py", line 40, in <module>
+    j1.loc[missing_idx, DISTRICT_FIELD] = j2[DISTRICT_FIELD].values
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\geopandas\geodataframe.py", line 1891, in __getitem__
+    result = super().__getitem__(key)
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pandas\core\frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'name'
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\13_aggregate_to_district.py
+Traceback (most recent call last):
+  File "D:\Heshan\Developments\test\Research\stgcn_sl\scripts\13_aggregate_to_district.py", line 11, in <module>
+    m = pd.read_csv(MAP_PATH).dropna(subset=["district"])
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "D:\Heshan\Developments\test\Research\venv\lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Heshan\\Developments\\test\\Research\\stgcn_sl\\data\\processed\\station_to_district_fixed.csv'    
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\13_aggregate_to_district.py
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\district\district_predictions_H1.csv rows= 2775
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\district\district_predictions_H2.csv rows= 2775
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\district\district_predictions_H3.csv rows= 2775
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\district\district_predictions_H4.csv rows= 2775
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\district\district_predictions_H5.csv rows= 2775
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\district\district_predictions_H6.csv rows= 2775
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\district\district_predictions_H7.csv rows= 2775
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\14_make_district_risk_labels.py
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\district\district_risk_labels.csv
+Thresholds: {'flood_roll3_p95': 59.551999963593886, 'drought_roll30_p10': 24.37138897486316}
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\15_train_calibrate_district_models.py
+D:\Heshan\Developments\test\Research\venv\lib\site-packages\sklearn\linear_model\_logistic.py:1272: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.8. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+H=1 macroF1=0.9936 T=0.500 valNLL=0.0026
+D:\Heshan\Developments\test\Research\venv\lib\site-packages\sklearn\linear_model\_logistic.py:1272: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.8. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+H=2 macroF1=0.9936 T=0.500 valNLL=0.0031
+D:\Heshan\Developments\test\Research\venv\lib\site-packages\sklearn\linear_model\_logistic.py:1272: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.8. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+D:\Heshan\Developments\test\Research\venv\lib\site-packages\sklearn\linear_model\_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 400 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=400).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+H=3 macroF1=0.9936 T=0.500 valNLL=0.0044
+D:\Heshan\Developments\test\Research\venv\lib\site-packages\sklearn\linear_model\_logistic.py:1272: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.8. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+H=4 macroF1=0.9936 T=0.500 valNLL=0.0027
+D:\Heshan\Developments\test\Research\venv\lib\site-packages\sklearn\linear_model\_logistic.py:1272: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.8. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+H=5 macroF1=0.9936 T=0.500 valNLL=0.0028
+D:\Heshan\Developments\test\Research\venv\lib\site-packages\sklearn\linear_model\_logistic.py:1272: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.8. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+H=6 macroF1=0.9936 T=0.500 valNLL=0.0028
+D:\Heshan\Developments\test\Research\venv\lib\site-packages\sklearn\linear_model\_logistic.py:1272: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.8. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+H=7 macroF1=0.9936 T=0.500 valNLL=0.0035
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\16_district_alerts_with_shap.py
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\district_alerts\district_alerts.csv alerts= 2901
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts\17_feedback_template_district.py
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\feedback\district_feedback.csv
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python scripts/19_update_policy_from_feedback.py
+Updated policy: {'thresholds': {'Flood': 0.6, 'Drought': 0.6}}
+Saved: D:\Heshan\Developments\test\Research\stgcn_sl\outputs\policy\policy.json
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> python -m pip install streamlit geopandas
+Requirement already satisfied: streamlit in d:\heshan\developments\test\research\venv\lib\site-packages (1.52.2)
+Requirement already satisfied: geopandas in d:\heshan\developments\test\research\venv\lib\site-packages (1.1.2)
+Requirement already satisfied: pyarrow>=7.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (22.0.0)
+Requirement already satisfied: cachetools<7,>=4.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (6.2.4)
+Requirement already satisfied: click<9,>=7.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (8.3.1)
+Requirement already satisfied: requests<3,>=2.27 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (2.32.5)
+Requirement already satisfied: toml<2,>=0.10.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (0.10.2)
+Requirement already satisfied: blinker<2,>=1.5.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (1.9.0)
+Requirement already satisfied: watchdog<7,>=2.1.5 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (6.0.0)
+Requirement already satisfied: pydeck<1,>=0.8.0b4 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (0.9.1)
+Requirement already satisfied: numpy<3,>=1.23 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (2.2.6)
+Requirement already satisfied: tornado!=6.5.0,<7,>=6.0.3 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (6.5.4)
+Requirement already satisfied: pillow<13,>=7.1.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (12.1.0)
+Requirement already satisfied: gitpython!=3.1.19,<4,>=3.0.7 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (3.1.46)
+Requirement already satisfied: protobuf<7,>=3.20 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (6.33.2)
+Requirement already satisfied: pandas<3,>=1.4.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (2.3.3)
+Requirement already satisfied: typing-extensions<5,>=4.4.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (4.15.0)
+Requirement already satisfied: tenacity<10,>=8.1.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (9.1.2)
+Requirement already satisfied: packaging>=20 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (25.0)
+Requirement already satisfied: altair!=5.4.0,!=5.4.1,<7,>=4.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from streamlit) (6.0.0)
+Requirement already satisfied: shapely>=2.0.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from geopandas) (2.1.2)
+Requirement already satisfied: pyogrio>=0.7.2 in d:\heshan\developments\test\research\venv\lib\site-packages (from geopandas) (0.12.1)
+Requirement already satisfied: pyproj>=3.5.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from geopandas) (3.7.1)
+Requirement already satisfied: jsonschema>=3.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (4.25.1)
+Requirement already satisfied: jinja2 in d:\heshan\developments\test\research\venv\lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (3.1.6)   
+Requirement already satisfied: narwhals>=1.27.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (2.14.0)
+Requirement already satisfied: colorama in d:\heshan\developments\test\research\venv\lib\site-packages (from click<9,>=7.0->streamlit) (0.4.6)
+Requirement already satisfied: gitdb<5,>=4.0.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from gitpython!=3.1.19,<4,>=3.0.7->streamlit) (4.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit) (5.0.2)
+Requirement already satisfied: referencing>=0.28.4 in d:\heshan\developments\test\research\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (0.37.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in d:\heshan\developments\test\research\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (2025.9.1)
+Requirement already satisfied: attrs>=22.2.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (25.4.0)
+Requirement already satisfied: rpds-py>=0.7.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (0.30.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in d:\heshan\developments\test\research\venv\lib\site-packages (from pandas<3,>=1.4.0->streamlit) (2.9.0.post0)
+Requirement already satisfied: tzdata>=2022.7 in d:\heshan\developments\test\research\venv\lib\site-packages (from pandas<3,>=1.4.0->streamlit) (2025.3)
+Requirement already satisfied: pytz>=2020.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from pandas<3,>=1.4.0->streamlit) (2025.2)
+Requirement already satisfied: MarkupSafe>=2.0 in d:\heshan\developments\test\research\venv\lib\site-packages (from jinja2->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit) (3.0.3)
+Requirement already satisfied: certifi in d:\heshan\developments\test\research\venv\lib\site-packages (from pyogrio>=0.7.2->geopandas) (2026.1.4)
+Requirement already satisfied: six>=1.5 in d:\heshan\developments\test\research\venv\lib\site-packages (from python-dateutil>=2.8.2->pandas<3,>=1.4.0->streamlit) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in d:\heshan\developments\test\research\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in d:\heshan\developments\test\research\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in d:\heshan\developments\test\research\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (2.6.2)    
+WARNING: You are using pip version 21.2.3; however, version 25.3 is available.
+You should consider upgrading via the 'D:\Heshan\Developments\test\Research\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+(venv) PS D:\Heshan\Developments\test\Research\stgcn_sl> streamlit run dashboard/app.py
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.8.101:8501
+
+D:\Heshan\Developments\test\Research\stgcn_sl\dashboard\app.py:24: UserWarning: Geometry is in a geographic CRS. Results from 'centroid' are likely incorrect. Use 'GeoSeries.to_crs()' to re-project geometries to a projected CRS before this operation.
+
+  gdf["centroid"] = gdf.geometry.centroid
+2026-01-05 02:14:55.983 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:17:05.975 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:17:42.005 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:20:59.253 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:21:32.120 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:30:21.390 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:30:32.137 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:32:36.841 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:32:42.432 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:32:44.754 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:32:47.170 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:32:49.094 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:32:55.398 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:53:30.146 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:53:35.924 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:56:02.473 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 02:56:06.914 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 03:05:48.922 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-05 03:06:41.626 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
