@@ -94,6 +94,3 @@ for H in horizons:
     print(f"Saved fig_04_01_learning_curve_H{H}.png")
 
 print("\nLearning curves complete!")
-
-
-# hu

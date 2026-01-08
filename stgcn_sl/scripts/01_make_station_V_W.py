@@ -41,7 +41,7 @@ def pairwise_distance_matrix(lat, lon):
             D[j, i] = d
     return D
 
-# hu
+
 
 
 def build_knn_weight_matrix(D, k=10, sigma=None, self_loop=True, sym_mode="max"):
